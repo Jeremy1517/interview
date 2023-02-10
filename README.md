@@ -1,0 +1,1 @@
+# Arkmind-Technical-Accessment-1
