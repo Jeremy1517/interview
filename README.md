@@ -2,33 +2,58 @@
 
 You are tasked to create a user interface for a testing system and microservices health.
 
->The application fetches a collection of tests from the backend and performs calls to the backend API to execute the individual tests.
+>The application monitor a collection of service status from the backend and performs calls to the backend API tovidw the usage foro each service.
 >
 
-The collection of tests should be fetched with GET request from the following URL:
-<br>
-`http://localhost:8001/api/v1/tests`
+**How to run Backend Server**
+- open terminal
+- type `cd backend`
+- type `npm install`
+- type `node index.js`
 
-Individual tests from the collection are executed with POST requests.
-
-You can test the API response from the console, for example:
+We have 4 main service need to monitor:
 <br>
-`curl -X POST http://localhost:8001/api/v1/tests/system/check-info`
+1. **Policy Service**
 <br>
-`{"result": "true"} `
-
-The API is expected to respond with standard HTTP status codes.
+Get status: GET `http://localhost:3000/services/check-policy`
+<br>
+Get details: GET `http://localhost:3000/services/check-policy/details`
+<br>
+2. **Auth Engine Service**
+<br>
+Get status: GET `http://localhost:3000/services/check-auth`
+<br>
+Get details: GET `http://localhost:3000/services/check-auth/details`
+3. **Insurance Engine Service**
+<br>
+Get status: GET `http://localhost:3000/services/check-insurance`
+<br>
+Get details: GET `http://localhost:3000/services/check-insurance/details`
+4. **Rating Engine Service**
+<br>
+Get status: GET `http://localhost:3000/services/check-rating-engine`
+<br>
+Get details: GET `http://localhost:3000/services/check-rating-engine/details`
 
 **Please create a UI in React that runs and displays the tests.**
 
 The UI should have two pages:
 
-1. The main page with the list of tests
-2. A page with the history of test runs (you can store the test results in localstorage)
+1. The main page with the list of service status
+   - basically it can be 4 card view
+   - if the `result` field return as `true`, show background green in color, else background red in color
+   
+2. A page with the service usage
+   - when user clicked on the card bod, it should redirect to another page and show the usage
+   - 5 page in total
+     - 1 page to see all the service status
+     - 1 page for each of the service usage (4 pages in total)
 
 #### Additional requirements:
 * Hooks should be used where suitable
-* A CSS framework of your choice may be used to style the components, for example Tailwind
+* A CSS framework of your choice may be used to style the components, for example Tailwind or AntDesign
+* Proper loading state when calling the API
+* Library required to use to call APIs in frontend: `axios`
 
 We will accept a zip archive with the entire `arkmind-technical-accessment-1` folder (do not include node_modules).
 <br>
