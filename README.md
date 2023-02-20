@@ -12,28 +12,18 @@ You are tasked to create a user interface for a testing system and microservices
 - type `node index.js`
 
 We have 4 main service need to monitor:
-<br>
 1. **Policy Service**
-<br>
-Get status: GET `http://localhost:3000/services/check-policy`
-<br>
-Get details: GET `http://localhost:3000/services/check-policy/details`
-<br>
+- Get status: GET `http://localhost:3000/services/check-policy`
+- Get details: GET `http://localhost:3000/services/check-policy/details`
 2. **Auth Engine Service**
-<br>
-Get status: GET `http://localhost:3000/services/check-auth`
-<br>
-Get details: GET `http://localhost:3000/services/check-auth/details`
+- Get status: GET `http://localhost:3000/services/check-auth`
+- Get details: GET `http://localhost:3000/services/check-auth/details`
 3. **Insurance Engine Service**
-<br>
-Get status: GET `http://localhost:3000/services/check-insurance`
-<br>
-Get details: GET `http://localhost:3000/services/check-insurance/details`
+- Get status: GET `http://localhost:3000/services/check-insurance`
+- Get details: GET `http://localhost:3000/services/check-insurance/details`
 4. **Rating Engine Service**
-<br>
-Get status: GET `http://localhost:3000/services/check-rating-engine`
-<br>
-Get details: GET `http://localhost:3000/services/check-rating-engine/details`
+- Get status: GET `http://localhost:3000/services/check-rating-engine`
+- Get details: GET `http://localhost:3000/services/check-rating-engine/details`
 
 **Please create a UI in React that runs and displays the tests.**
 
